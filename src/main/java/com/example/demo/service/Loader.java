@@ -39,7 +39,7 @@ public class Loader {
         this.repository = repository;
     }
 
-    @Scheduled(fixedRate = 5000000, initialDelay = 3000)
+    @Scheduled(cron = "0 0 16 * * *", zone = "Europe/Moscow")
     public void load() {
         try {
             URL url = new URL(RESOURCE);
